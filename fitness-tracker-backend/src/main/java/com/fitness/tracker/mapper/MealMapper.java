@@ -13,7 +13,7 @@ public class MealMapper {
         MealLogResponse response = new MealLogResponse();
         response.setId(mealLog.getId());
         response.setUserId(mealLog.getUserId());
-        response.setMealName(mealLog.getMealName());
+        response.setMealType(mealLog.getMealType().name());
         response.setDate(mealLog.getDate());
         response.setTotalCalories(mealLog.getTotalCalories());
         response.setTotalProtein(mealLog.getTotalProtein());

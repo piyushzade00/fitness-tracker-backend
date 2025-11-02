@@ -7,7 +7,7 @@ import java.util.List;
 @Data
 public class MealLogRequest {
     private Long userId;
-    private String mealName; // e.g. "Lunch"
+    private String mealType;
     private LocalDate date;
     private List<FoodItemRequest> foods;
 }

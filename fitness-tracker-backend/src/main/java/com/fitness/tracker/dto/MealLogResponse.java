@@ -8,7 +8,7 @@ import java.util.List;
 public class MealLogResponse {
     private Long id;
     private Long userId;
-    private String mealName;
+    private String mealType;
     private LocalDate date;
     private Double totalCalories;
     private Double totalProtein;
