@@ -1,5 +1,6 @@
 package com.fitness.tracker.entity;
 
+import com.fitness.tracker.enums.MealType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,7 +9,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-@Table(name = "meal_entry")
+@Table(name = "meal_log")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -19,7 +20,10 @@ public class MealLog {
     private Long id;
 
     private Long userId; // user link (later replace with @ManyToOne when User entity added)
-    private String mealName; // e.g. Breakfast, Lunch, Dinner
+
+    @Enumerated(EnumType.STRING)
+    private MealType mealType;
+
     private LocalDate date;  // when meal was taken
 
     @OneToMany(mappedBy = "mealLog", cascade = CascadeType.ALL, orphanRemoval = true)
